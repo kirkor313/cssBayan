@@ -1,0 +1,92 @@
+body {
+  background-color:rgb(252, 242, 228);
+  font-weight: 700;
+  font-size: 1.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.task-name {
+  font-size: 2rem;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 50px;
+}
+
+.memes-list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  color:blue;
+}
+
+.memes-list:hover {
+  color:black;
+  cursor: pointer;
+}
+
+.accordeon-icon {
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+
+.mem-item {
+  margin: 0;
+  padding: 20px 0;
+}
+
+.mem-image {
+  max-width: 0;
+  max-height: 0;
+}
+
+.accordion-input {
+  width: 0;
+  height: 0;
+  appearance: none;
+  position: absolute;
+}
+
+.accordeon-label-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-label {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid rgb(182, 180, 180);
+  padding: 10px 10px 40px 10px;
+}
+
+.mem-item:hover > img ,
+.accordion-input:checked ~ .mem-image {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 1.5s ease-in-out;
+  margin: 0 auto;
+}
+
+.accordion-input:checked + .accordion-label span {
+  color: black;
+}
+
+.accordion-input:checked + .accordion-label img {
+  transform: rotate(45deg);
+}
+
+.mem-item:hover > label > .accordeon-label-content > img {
+  transform: rotate(45deg);
+  transition: all 0.3s ease-in;
+}
+
+.memes-list:hover >.mem-item > label > .accordeon-label-content > img {
+  display: block;
+}
+
+
