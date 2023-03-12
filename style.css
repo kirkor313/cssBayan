@@ -9,9 +9,8 @@ body {
 }
 
 .task-name {
-  font-size: 2rem;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 5%;
 }
 
 .memes-list {
@@ -21,11 +20,6 @@ body {
   color:blue;
 }
 
-.memes-list:hover {
-  color:black;
-  cursor: pointer;
-}
-
 .accordeon-icon {
   opacity: 0;
   transition: all 0.8s ease-in-out;
@@ -33,7 +27,7 @@ body {
 
 .mem-item {
   margin: 0;
-  padding: 20px 0;
+  padding: 1% 0;
 }
 
 .mem-image {
@@ -57,17 +51,15 @@ body {
 .accordion-label {
   display: block;
   width: 100%;
-  height: 30px;
   border-top: 1px solid rgb(182, 180, 180);
-  padding: 10px 10px 40px 10px;
+  padding: 1% 1% 4% 1%;
   cursor: pointer;
 }
 
-.mem-item:hover > img ,
 .accordion-input:checked ~ .mem-image {
   display: block;
   max-height: 100%;
-  transition: all 0.8s ease-in-out;
+  transition: all 1s ease-in-out;
   margin: 0 auto;
   opacity: 1;
 }
@@ -80,17 +72,6 @@ body {
   transform: rotate(45deg);
 }
 
-.mem-item:hover > label > .accordeon-label-content > img {
-  transform: rotate(45deg);
-  transition: all 0.3s ease-in;
-}
-
-.memes-list:hover >.mem-item > label > .accordeon-label-content > img {
-  display: block;
-  opacity: 1;
-  transition: all 0.8s ease-in-out;
-}
-
 .accordion-input:active + .accordion-label span {
   color:blue;
 }
@@ -101,9 +82,35 @@ body {
   transition: all 1ms ;
 }
 
-@media screen and (min-width: 400px) {
+@media (hover: hover) and (pointer: fine) {
+  .mem-item:hover > label > .accordeon-label-content > img {
+    transform: rotate(45deg);
+    transition: all 0.3s ease-in;
+  }
+  .memes-list:hover >.mem-item > label > .accordeon-label-content > img {
+    display: block;
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
+  }
+  .mem-item:hover > img {
+    display: block;
+    max-height: 100%;
+    transition: all 1s ease-in-out;
+    margin: 0 auto;
+    opacity: 1;
+  }
+  .memes-list:hover {
+    color:black;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 380px) {
   body {
     font-size: 1.2rem;
+  }
+  .task-name {
+    font-size: 1.7rem;
   }
 }
 
@@ -111,17 +118,26 @@ body {
   body {
     font-size: 1.4rem;
   }
+  .task-name {
+    font-size: 1.9rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.6rem;
   }
+  .task-name {
+    font-size: 2.3rem;
+  }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1920px) {
   body {
     font-size: 1.8rem;
+  }
+  .task-name {
+    font-size: 2.5rem;
   }
 }
 
